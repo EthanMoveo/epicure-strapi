@@ -1,0 +1,7 @@
+/**
+ * restaurant-swiper router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::restaurant-swiper.restaurant-swiper');

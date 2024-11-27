@@ -27,13 +27,21 @@
       "relation": "oneToOne",
       "target": "api::restaurant.restaurant"
     },
-    "image": {
-      "type": "string"
-    },
     "tags": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

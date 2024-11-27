@@ -4,7 +4,8 @@
   "info": {
     "singularName": "chef",
     "pluralName": "chefs",
-    "displayName": "Chef"
+    "displayName": "Chef",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

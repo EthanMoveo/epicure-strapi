@@ -1,21 +1,17 @@
 {
-  "kind": "collectionType",
-  "collectionName": "tags",
+  "kind": "singleType",
+  "collectionName": "heroes",
   "info": {
-    "singularName": "tag",
-    "pluralName": "tags",
-    "displayName": "Tag",
-    "description": ""
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "Hero"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "image": {
+    "background": {
       "allowedTypes": [
         "images",
         "files",
@@ -24,6 +20,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "text": {
+      "type": "text"
+    },
+    "inputPlaceholder": {
+      "type": "text"
     }
   }
 }
