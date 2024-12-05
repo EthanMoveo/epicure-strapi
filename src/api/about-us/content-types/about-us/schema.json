@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-us",
     "pluralName": "about-uses",
-    "displayName": "About Us"
+    "displayName": "About Us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "content": {
-      "type": "text"
+      "type": "text",
+      "required": true
+    },
+    "sectionTitle": {
+      "type": "string",
+      "required": true
     }
   }
 }

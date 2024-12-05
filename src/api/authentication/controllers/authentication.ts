@@ -10,12 +10,10 @@ export default factories.createCoreController('api::authentication.authenticatio
   async login(ctx) {
     const { username, password } = ctx.request.body;
 
-    // Vérification des données d'entrée
     if (!username || !password) {
       return ctx.badRequest('Username and password are required.');
     }
 
-    // Recherche de l'utilisateur par username
     const user = await strapi.db.query('api::authentication.authentication').findOne({
       where: { username },
     });
@@ -24,14 +22,12 @@ export default factories.createCoreController('api::authentication.authenticatio
       return ctx.unauthorized('Invalid username or password.');
     }
 
-    // Comparaison des mots de passe
     const validPassword = bcrypt.compareSync(password, user.password);
 
     if (!validPassword) {
       return ctx.unauthorized('Invalid username or password.');
     }
 
-    // Génération du JWT
     const token = jwt.sign(
       { id: user.id, username: user.username },
       process.env.JWT_SECRET || 'default_secret', 

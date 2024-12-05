@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dish-swiper",
     "pluralName": "dish-swipers",
-    "displayName": "Dish Swiper"
+    "displayName": "Dish Swiper",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::dish.dish"
+    },
+    "sectionTitle": {
+      "type": "string",
+      "required": true
     }
   }
 }

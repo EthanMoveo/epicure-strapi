@@ -13,14 +13,17 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "price": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "required": true
     },
     "ingredients": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "restaurant": {
       "type": "relation",
@@ -35,7 +38,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",

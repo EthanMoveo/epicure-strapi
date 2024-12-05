@@ -4,7 +4,8 @@
   "info": {
     "singularName": "chef-of-the-week",
     "pluralName": "chef-of-the-weeks",
-    "displayName": "ChefOfTheWeek"
+    "displayName": "ChefOfTheWeek",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,10 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::chef.chef"
+    },
+    "sectionTitle": {
+      "type": "string",
+      "required": true
     }
   }
 }
